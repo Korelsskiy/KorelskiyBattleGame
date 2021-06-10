@@ -2,6 +2,7 @@
 
 namespace Korelskiy.Models.Cells
 {
+    //HELLO KIRILL YOOOOOO
     public interface ICell
     {
         int XCoordinate { get; }
