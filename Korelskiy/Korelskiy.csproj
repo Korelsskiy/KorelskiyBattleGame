@@ -51,19 +51,43 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <ApplicationDefinition Include="App.xaml">
+    <ApplicationDefinition Include="Infrastructure\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Views\GameWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.xaml.cs">
+    <Compile Include="Infrastructure\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Models\Cells\ForestCell.cs" />
+    <Compile Include="Models\Cells\ICell.cs" />
+    <Compile Include="Models\Cells\MountainCell.cs" />
+    <Compile Include="Models\Cells\RiverCell.cs" />
+    <Compile Include="Models\Cells\TerrainCell.cs" />
+    <Compile Include="Models\Maps\AlfaMap.cs" />
+    <Compile Include="Models\Maps\BetaMap.cs" />
+    <Compile Include="Models\Maps\CharlyMap.cs" />
+    <Compile Include="Models\Maps\DeltaMap.cs" />
+    <Compile Include="Models\Maps\IMap.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\Bf109.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\Fw190.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\IFighter.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\P51.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\Spitfire.cs" />
+    <Compile Include="Models\Units\Airplanes\IAirplane.cs" />
+    <Compile Include="Models\Units\IUnit.cs" />
+    <Compile Include="Views\GameWindow.xaml.cs">
+      <DependentUpon>GameWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -92,14 +116,22 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="Infrastructure\App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\CellsImages\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MainMenuBacground\1.jpg" />
     <Resource Include="Images\MainMenuBacground\2.jpg" />
     <Resource Include="Images\MainMenuBacground\3.jpg" />
-    <Resource Include="Images\MainMenuBacground\4.jpg" />
+    <Resource Include="Images\MainMenuBacground\0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\bf109.jpg" />
+    <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\fw190.jpg" />
+    <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\p51.jpg" />
+    <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\spitfire.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

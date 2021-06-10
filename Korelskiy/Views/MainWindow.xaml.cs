@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Korelskiy.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,14 @@ namespace Korelskiy
         private void SetBackgroundImage()
         {
             int randomPhoto = new Random().Next(0, 4);
-            mainMenuBackgroundImage.Source = new BitmapImage(new Uri($"..\\Images\\MainMenuBacground\\{randomPhoto}"));
+            mainMenuBackgroundImage.Source = new BitmapImage(new Uri($"../Images/MainMenuBacground/{randomPhoto}.jpg", UriKind.Relative));
+        }
+
+        private void startGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            GameWindow window = new GameWindow();
+            window.Show();
+            this.Close();
         }
     }
 }
