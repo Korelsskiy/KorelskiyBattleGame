@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Korelskiy.Views"
         mc:Ignorable="d"
         Title="GameWindow" FontSize="60" Height="1080" Width="1920"
-        WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" Closing="Window_Closing">
     
     <Grid>
         <Grid.ColumnDefinitions>
