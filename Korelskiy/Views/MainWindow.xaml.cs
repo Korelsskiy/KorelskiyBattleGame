@@ -34,7 +34,7 @@ namespace Korelskiy
 
         private void startGameButton_Click(object sender, RoutedEventArgs e)
         {
-            GameWindow window = new GameWindow();
+            GameSettingsWindow window = new GameSettingsWindow();
             window.Show();
             this.Close();
         }

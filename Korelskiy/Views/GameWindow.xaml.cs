@@ -24,10 +24,10 @@ namespace Korelskiy.Views
     {
         private IMap map;
 
-        public GameWindow()
+        public GameWindow(IMap map)
         {
             InitializeComponent();
-            map = new AlfaMap();
+            this.map = map;
             DrawMap();
             AddUnitsToStack();
             mapTitleLable.Content = map.Title;
@@ -42,6 +42,13 @@ namespace Korelskiy.Views
         {
             IUnit bf = new Bf109(new Button());
             unitsStack.Children.Add(bf.Display());
+        }
+
+        private void backToGameSettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            GameSettingsWindow window = new GameSettingsWindow();
+            window.Show();
+            this.Close();
         }
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)

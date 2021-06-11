@@ -27,5 +27,9 @@
         </ScrollViewer>
 
         <StackPanel x:Name="unitsStack" Grid.Row="1" Grid.Column="0"></StackPanel>
+
+        <Button x:Name="backToGameSettingsButton" Grid.Row="2" Grid.Column="2" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" Content="Назад" 
+                Click="backToGameSettingsButton_Click"></Button>
     </Grid>
 </Window>

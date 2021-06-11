@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Korelskiy.Models.Maps;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,29 @@ namespace Korelskiy.Views
         public GameSettingsWindow()
         {
             InitializeComponent();
+            LoadMapBox();
+        }
+
+        private void LoadMapBox()
+        {
+            List<IMap> allMaps = new List<IMap> { new AlfaMap(), new BetaMap()};
+            mapSelectBox.ItemsSource = allMaps;
+            mapSelectBox.DisplayMemberPath = "Title";
+            mapSelectBox.SelectedIndex = 0;
+        }
+
+        private void startGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            GameWindow game = new GameWindow(mapSelectBox.SelectedItem as IMap);
+            game.Show();
+            this.Close();
+        }
+
+        private void backToMainMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            window.Show();
+            this.Close();
         }
     }
 }

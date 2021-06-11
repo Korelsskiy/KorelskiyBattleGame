@@ -5,8 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Korelskiy.Views"
         mc:Ignorable="d"
-        Title="GameSettingsWindow" Height="450" Width="800">
+        Title="GameSettingsWindow" FontSize="30" Height="1080" Width="1920"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Карта:"></Label>
+                <ComboBox x:Name="mapSelectBox"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Страна первого игрока:"></Label>
+                <ComboBox x:Name="firstPlayerNationSelectBox"></ComboBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Страна второго игрока:"></Label>
+                <ComboBox x:Name="secondPlayerNationBox"></ComboBox>
+            </StackPanel>
+            <Button x:Name="startGameButton" Content="Начать" Click="startGameButton_Click"></Button>
+            <Button x:Name="backToMainMenuButton" Content="Назад" Click="backToMainMenuButton_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>
