@@ -28,7 +28,7 @@ namespace Korelskiy.Views
 
         private void LoadMapBox()
         {
-            List<IMap> allMaps = new List<IMap> { new AlfaMap(), new BetaMap()};
+            List<IMap> allMaps = new List<IMap> { new AlfaMap(), new BetaMap(), new CharlyMap()};
             mapSelectBox.ItemsSource = allMaps;
             mapSelectBox.DisplayMemberPath = "Title";
             mapSelectBox.SelectedIndex = 0;

@@ -50,19 +50,5 @@ namespace Korelskiy.Views
             window.Show();
             this.Close();
         }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MessageBoxResult messageBoxResult = MessageBox.Show("Вы уверены, что хотите выйти из игры?", "Выход из игры", MessageBoxButton.YesNo);
-            if(messageBoxResult != MessageBoxResult.Yes)
-            {
-                e.Cancel = true;
-                return;
-            }
-            else
-            {
-                Application.Current.Shutdown();
-            }
-        }
     }
 }
