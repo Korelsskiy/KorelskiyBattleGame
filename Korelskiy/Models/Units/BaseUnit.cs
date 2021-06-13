@@ -7,12 +7,12 @@ using System.Windows.Controls;
 
 namespace Korelskiy.Models.Units
 {
-    public interface IUnit
+    public abstract class BaseUnit
     {
         string Title { get; }
         string ImageName { get; }
         int Cost { get; }
-        void Draw(Button buttonForDraw);
-        Button Display();
+        public abstract void Draw(Button buttonForDraw);
+        public abstract Button Display();
     }
 }

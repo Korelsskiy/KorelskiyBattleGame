@@ -28,7 +28,7 @@ namespace Korelskiy.Views
 
         private void LoadMapBox()
         {
-            List<IMap> allMaps = new List<IMap> { new AlfaMap(), new BetaMap(), new CharlyMap()};
+            List<BaseMap> allMaps = new List<BaseMap> { new AlfaMap(), new BetaMap(), new CharlyMap(), new DeltaMap()};
             mapSelectBox.ItemsSource = allMaps;
             mapSelectBox.DisplayMemberPath = "Title";
             mapSelectBox.SelectedIndex = 0;
@@ -36,7 +36,7 @@ namespace Korelskiy.Views
 
         private void startGameButton_Click(object sender, RoutedEventArgs e)
         {
-            GameWindow game = new GameWindow(mapSelectBox.SelectedItem as IMap);
+            GameWindow game = new GameWindow(mapSelectBox.SelectedItem as BaseMap);
             game.Show();
             this.Close();
         }

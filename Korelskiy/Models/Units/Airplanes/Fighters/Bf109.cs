@@ -9,7 +9,7 @@ using System.Windows.Media.Imaging;
 
 namespace Korelskiy.Models.Units.Airplanes.Fighters
 {
-    public class Bf109 : IUnit, IAirplane, IFighter
+    public class Bf109 : BaseFighterAirplane
     {
         public string Title => "Bf.109G-14";
 
@@ -25,7 +25,7 @@ namespace Korelskiy.Models.Units.Airplanes.Fighters
             Draw(buttonForDraw);
         }
 
-        public void Draw(Button buttonForDraw)
+        public override void Draw(Button buttonForDraw)
         {
             buttonForDraw.Width = 160;
             buttonForDraw.Height = 120;
@@ -43,7 +43,7 @@ namespace Korelskiy.Models.Units.Airplanes.Fighters
 
         }
 
-        public Button Display()
+        public override Button Display()
         {
             return btn;
         }

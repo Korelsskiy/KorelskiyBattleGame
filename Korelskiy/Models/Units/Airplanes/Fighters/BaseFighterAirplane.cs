@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Korelskiy.Models.Units.Airplanes.Fighters
 {
-    class Spitfire
+    public abstract class BaseFighterAirplane : BaseAirplane
     {
     }
 }

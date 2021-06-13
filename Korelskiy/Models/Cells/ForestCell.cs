@@ -9,19 +9,13 @@ using System.Windows.Media;
 
 namespace Korelskiy.Models.Cells
 {
-    public class ForestCell : ICell
+    public class ForestCell : BaseCell
     {
-        public int XCoordinate { get; set; }
-
-        public int YCoordinate { get; set; }
-
         public ForestCell(int xCoordinate, int yCoordinate)
-        {
-            XCoordinate = xCoordinate;
-            YCoordinate = yCoordinate;
-        }
+            : base(xCoordinate, yCoordinate) { }
 
-        public void Draw(Button buttonForDraw)
+
+        public override void Draw(Button buttonForDraw)
         {
             Color color = (Color)ColorConverter.ConvertFromString("#076d0b");
             buttonForDraw.Background = new SolidColorBrush(color);
@@ -29,7 +23,7 @@ namespace Korelskiy.Models.Cells
             buttonForDraw.Click += (q, e) => Reaction();
         }
 
-        public void Reaction()
+        public override void Reaction()
         {
             MessageBox.Show($"В этом квадрате лес. Его координаты: ({XCoordinate};{YCoordinate})");
         }

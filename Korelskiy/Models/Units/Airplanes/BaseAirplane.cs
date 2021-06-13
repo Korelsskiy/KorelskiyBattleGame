@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Korelskiy.Models.Units.Airplanes.Fighters
+namespace Korelskiy.Models.Units.Airplanes
 {
-    public interface IFighter
+    public abstract class BaseAirplane : BaseUnit
     {
     }
 }

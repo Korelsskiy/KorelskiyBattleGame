@@ -22,9 +22,9 @@ namespace Korelskiy.Views
     /// </summary>
     public partial class GameWindow : Window
     {
-        private IMap map;
+        private BaseMap map;
 
-        public GameWindow(IMap map)
+        public GameWindow(BaseMap map)
         {
             InitializeComponent();
             this.map = map;
@@ -40,7 +40,7 @@ namespace Korelskiy.Views
 
         private void AddUnitsToStack()
         {
-            IUnit bf = new Bf109(new Button());
+            BaseUnit bf = new Bf109(new Button());
             unitsStack.Children.Add(bf.Display());
         }
 

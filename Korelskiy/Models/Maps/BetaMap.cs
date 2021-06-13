@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace Korelskiy.Models.Maps
 {
-    public class BetaMap : IMap
+    public class BetaMap : BaseMap
     {
         public string Title { get => "Карта №2"; }
 
@@ -68,7 +68,7 @@ namespace Korelskiy.Models.Maps
             "13,12", "13,13",
         };
 
-        public void Draw(Grid gridForDraw)
+        public override void Draw(Grid gridForDraw)
         {
             gridForDraw.Children.Clear();
             gridForDraw.RowDefinitions.Clear();
@@ -86,7 +86,7 @@ namespace Korelskiy.Models.Maps
                 {
 
                     Button buttonForDraw = new Button() { Height = 45, Width = 45 };
-                    ICell cellForAdd;
+                    BaseCell cellForAdd;
                     if (forestCells.Contains($"{i},{j}"))
                         cellForAdd = new ForestCell(j, i);
                     else if (riverCells.Contains($"{i},{j}"))

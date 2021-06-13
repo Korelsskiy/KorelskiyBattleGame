@@ -71,23 +71,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\Cells\BaseCell.cs" />
     <Compile Include="Models\Cells\ForestCell.cs" />
-    <Compile Include="Models\Cells\ICell.cs" />
     <Compile Include="Models\Cells\MountainCell.cs" />
     <Compile Include="Models\Cells\RiverCell.cs" />
     <Compile Include="Models\Cells\TerrainCell.cs" />
     <Compile Include="Models\Maps\AlfaMap.cs" />
+    <Compile Include="Models\Maps\BaseMap.cs" />
     <Compile Include="Models\Maps\BetaMap.cs" />
     <Compile Include="Models\Maps\CharlyMap.cs" />
     <Compile Include="Models\Maps\DeltaMap.cs" />
-    <Compile Include="Models\Maps\IMap.cs" />
+    <Compile Include="Models\Units\Airplanes\BaseAirplane.cs" />
+    <Compile Include="Models\Units\Airplanes\Fighters\BaseFighterAirplane.cs" />
     <Compile Include="Models\Units\Airplanes\Fighters\Bf109.cs" />
-    <Compile Include="Models\Units\Airplanes\Fighters\Fw190.cs" />
-    <Compile Include="Models\Units\Airplanes\Fighters\IFighter.cs" />
-    <Compile Include="Models\Units\Airplanes\Fighters\P51.cs" />
-    <Compile Include="Models\Units\Airplanes\Fighters\Spitfire.cs" />
-    <Compile Include="Models\Units\Airplanes\IAirplane.cs" />
-    <Compile Include="Models\Units\IUnit.cs" />
+    <Compile Include="Models\Units\BaseUnit.cs" />
     <Compile Include="Views\GameSettingsWindow.xaml.cs">
       <DependentUpon>GameSettingsWindow.xaml</DependentUpon>
     </Compile>
