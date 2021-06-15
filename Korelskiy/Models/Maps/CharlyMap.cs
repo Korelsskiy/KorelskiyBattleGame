@@ -10,8 +10,6 @@ namespace Korelskiy.Models.Maps
 {
     public class CharlyMap : BaseMap
     {
-        public string Title { get => "Карта №3"; }
-
         string[] forestCells = new string[]
         {
             "7,0", "7,1", "7,2", "7,3", "7,12", "7,13", "7,14", "7,15",
@@ -39,6 +37,8 @@ namespace Korelskiy.Models.Maps
             "12,2", "12,3", "12,12", "12,13",
             "13,2", "13,3", "13,12", "13,13"
         };
+
+        public CharlyMap() : base("Карта №3") { }
 
         public override void Draw(Grid gridForDraw)
         {

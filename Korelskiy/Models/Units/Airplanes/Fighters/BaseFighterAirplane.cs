@@ -8,5 +8,6 @@ namespace Korelskiy.Models.Units.Airplanes.Fighters
 {
     public abstract class BaseFighterAirplane : BaseAirplane
     {
+        public BaseFighterAirplane(string title, string imageTitle, int price, Nations nation) : base(title, imageTitle, price, nation) { }
     }
 }

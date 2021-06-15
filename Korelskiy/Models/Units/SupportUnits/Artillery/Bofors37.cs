@@ -7,14 +7,18 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
-namespace Korelskiy.Models.Units.Airplanes.Fighters
+namespace Korelskiy.Models.Units.SupportUnits.Artillery
 {
-    public class Bf109 : BaseFighterAirplane
+    public class Bofors37 : BaseArtillery
     {
-        public Bf109()
-            :base("Bf.109E-1", "bf109.jpg", 60, Nations.Germany)
+        public Bofors37()
+           : base(
+                "Пт-расчет",
+                "bofors37.jpg",
+                40,
+                Nations.Poland
+                )
         {
-            //Draw(buttonForDraw);
         }
 
         public override Button Draw(Button buttonForDraw)
@@ -22,7 +26,7 @@ namespace Korelskiy.Models.Units.Airplanes.Fighters
             buttonForDraw.Width = 160;
             buttonForDraw.Height = 120;
             buttonForDraw.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            Image photo = new Image() { Source = new BitmapImage(new Uri($"../Images/UnitsImages/AirplanesImages/FightersImages/{ImageTitle}", UriKind.Relative)), Height = 80 };
+            Image photo = new Image() { Source = new BitmapImage(new Uri($"../Images/UnitsImages/SupportUnitsImages/ArtilleryUnits/{ImageTitle}", UriKind.Relative)), Height = 80 };
             Label title = new Label() { HorizontalAlignment = System.Windows.HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center, Content = $"{Title}", Height = 20, FontSize = 10 };
             Label price = new Label() { HorizontalAlignment = System.Windows.HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center, Content = $"Цена: {Price}", Height = 20, FontSize = 10 };
             StackPanel elements = new StackPanel();

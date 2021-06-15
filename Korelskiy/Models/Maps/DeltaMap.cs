@@ -10,8 +10,6 @@ namespace Korelskiy.Models.Maps
 {
     public class DeltaMap : BaseMap
     {
-        public string Title { get => "Карта №4"; }
-
         string[] forestCells = new string[]
         {
             "2,7", "2,8",
@@ -42,6 +40,8 @@ namespace Korelskiy.Models.Maps
             "10,11", "10,12"
             
         };
+
+        public DeltaMap() : base("Карта №4") { }
 
         public override void Draw(Grid gridForDraw)
         {

@@ -29,14 +29,22 @@ namespace Korelskiy.Views
         private void LoadMapBox()
         {
             List<BaseMap> allMaps = new List<BaseMap> { new AlfaMap(), new BetaMap(), new CharlyMap(), new DeltaMap()};
+            string[] places = new string[] { @"Операция ""Вайс""(1939)" };
+
+            operationComboBox.ItemsSource = places;
             mapSelectBox.ItemsSource = allMaps;
+
             mapSelectBox.DisplayMemberPath = "Title";
+
+            operationComboBox.SelectedIndex = 0;
             mapSelectBox.SelectedIndex = 0;
+
+
         }
 
         private void startGameButton_Click(object sender, RoutedEventArgs e)
         {
-            GameWindow game = new GameWindow(mapSelectBox.SelectedItem as BaseMap);
+            GameWindow game = new GameWindow(mapSelectBox.SelectedItem as BaseMap, operationComboBox.SelectedItem.ToString());
             game.Show();
             this.Close();
         }

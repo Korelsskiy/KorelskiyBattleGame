@@ -9,10 +9,20 @@ namespace Korelskiy.Models.Units
 {
     public abstract class BaseUnit
     {
-        string Title { get; }
-        string ImageName { get; }
-        int Cost { get; }
-        public abstract void Draw(Button buttonForDraw);
-        public abstract Button Display();
+        public string Title { get; }
+        public string ImageTitle { get; }
+        public int Price { get; }
+
+        public Nations Nation { get; set; }
+
+        public BaseUnit(string title, string imageTitle, int price, Nations nation)
+        {
+            Title = title;
+            ImageTitle = imageTitle;
+            Price = price;
+            Nation = nation;
+        }
+
+        public abstract Button Draw(Button buttonForDraw);
     }
 }

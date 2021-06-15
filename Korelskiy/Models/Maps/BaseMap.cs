@@ -9,11 +9,12 @@ namespace Korelskiy.Models.Maps
 {
     public abstract class BaseMap
     {
-        private string[] forestCells;
-        private string[] riverCells;
-        private string[] mountainCells;
-
         public string Title { get; }
+
+        public BaseMap(string title)
+        {
+            Title = title;
+        }
 
         public abstract void Draw(Grid gridForDraw);
     }

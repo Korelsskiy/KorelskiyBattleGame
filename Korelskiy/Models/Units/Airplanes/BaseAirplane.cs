@@ -8,5 +8,6 @@ namespace Korelskiy.Models.Units.Airplanes
 {
     public abstract class BaseAirplane : BaseUnit
     {
+        public BaseAirplane(string title, string imageTitle, int price, Nations nation) : base(title, imageTitle, price, nation) { }
     }
 }

@@ -10,8 +10,6 @@ namespace Korelskiy.Models.Maps
 {
     public class AlfaMap : BaseMap
     {
-        public string Title { get => "Карта №1"; }
-
         string[] forestCells = new string[]
         {
             "0,11", "0,12",
@@ -54,6 +52,8 @@ namespace Korelskiy.Models.Maps
             "15,12", "15,13", "15,14"
 
         };
+
+        public AlfaMap() : base("Карта №1") { }
 
         public override void Draw(Grid gridForDraw)
         {

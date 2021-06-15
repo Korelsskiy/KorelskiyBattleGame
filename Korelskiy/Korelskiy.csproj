@@ -81,10 +81,25 @@
     <Compile Include="Models\Maps\BetaMap.cs" />
     <Compile Include="Models\Maps\CharlyMap.cs" />
     <Compile Include="Models\Maps\DeltaMap.cs" />
+    <Compile Include="Models\Nations.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Units\Airplanes\BaseAirplane.cs" />
     <Compile Include="Models\Units\Airplanes\Fighters\BaseFighterAirplane.cs" />
     <Compile Include="Models\Units\Airplanes\Fighters\Bf109.cs" />
     <Compile Include="Models\Units\BaseUnit.cs" />
+    <Compile Include="Models\Units\Infantry\BaseInfantry.cs" />
+    <Compile Include="Models\Units\Infantry\GermanInfantrySquad.cs" />
+    <Compile Include="Models\Units\Infantry\PolishInfantrySquad.cs" />
+    <Compile Include="Models\Units\SupportUnits\Artillery\BaseArtillery.cs" />
+    <Compile Include="Models\Units\SupportUnits\Artillery\Bofors37.cs" />
+    <Compile Include="Models\Units\SupportUnits\Artillery\Pak36.cs" />
+    <Compile Include="Models\Units\SupportUnits\BaseSupportUnit.cs" />
+    <Compile Include="Models\Units\SupportUnits\Howitzer\BaseHowitzer.cs" />
+    <Compile Include="Models\Units\SupportUnits\Howitzer\Leig18.cs" />
+    <Compile Include="Models\Units\SupportUnits\Howitzer\Wz1897.cs" />
+    <Compile Include="Models\Units\SupportUnits\MachineGuns\BaseMachineGun.cs" />
+    <Compile Include="Models\Units\SupportUnits\MachineGuns\MG34.cs" />
+    <Compile Include="Models\Units\SupportUnits\MachineGuns\Wz30.cs" />
     <Compile Include="Views\GameSettingsWindow.xaml.cs">
       <DependentUpon>GameSettingsWindow.xaml</DependentUpon>
     </Compile>
@@ -136,6 +151,22 @@
     <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\fw190.jpg" />
     <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\p51.jpg" />
     <Resource Include="Images\UnitsImages\AirplanesImages\FightersImages\spitfire.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnitsImages\InfantryImages\germanSquad.jpg" />
+    <Resource Include="Images\UnitsImages\InfantryImages\polishSquad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\ArtilleryUnits\bofors37.jpg" />
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\ArtilleryUnits\pak36.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\HowitzerUnits\leig18.jpg" />
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\HowitzerUnits\wz1897.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\MachineGuns\mg34.jpg" />
+    <Resource Include="Images\UnitsImages\SupportUnitsImages\MachineGuns\wz30.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

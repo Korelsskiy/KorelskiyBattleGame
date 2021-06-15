@@ -10,8 +10,6 @@ namespace Korelskiy.Models.Maps
 {
     public class BetaMap : BaseMap
     {
-        public string Title { get => "Карта №2"; }
-
         string[] forestCells = new string[]
         {
             "0,0", "0,1", "0,2", "0,3",
@@ -67,6 +65,8 @@ namespace Korelskiy.Models.Maps
             "12,12", "12,13",
             "13,12", "13,13",
         };
+
+        public BetaMap() : base("Карта №2") { }
 
         public override void Draw(Grid gridForDraw)
         {

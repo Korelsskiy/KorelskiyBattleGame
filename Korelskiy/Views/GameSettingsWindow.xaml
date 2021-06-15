@@ -20,12 +20,8 @@
                 <ComboBox x:Name="mapSelectBox"></ComboBox>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <Label Content="Страна первого игрока:"></Label>
-                <ComboBox x:Name="firstPlayerNationSelectBox"></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Страна второго игрока:"></Label>
-                <ComboBox x:Name="secondPlayerNationBox"></ComboBox>
+                <Label Content="Операция:"></Label>
+                <ComboBox x:Name="operationComboBox"></ComboBox>
             </StackPanel>
             <Button x:Name="startGameButton" Content="Начать" Click="startGameButton_Click"></Button>
             <Button x:Name="backToMainMenuButton" Content="Назад" Click="backToMainMenuButton_Click"></Button>
