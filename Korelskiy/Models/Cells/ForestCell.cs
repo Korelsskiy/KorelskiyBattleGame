@@ -19,13 +19,14 @@ namespace Korelskiy.Models.Cells
         {
             Color color = (Color)ColorConverter.ConvertFromString("#076d0b");
             buttonForDraw.Background = new SolidColorBrush(color);
-            buttonForDraw.Tag = $"{XCoordinate}|{YCoordinate}";
-            buttonForDraw.Click += (q, e) => Reaction();
+            buttonForDraw.Tag = this;
+            buttonForDraw.Click += (q, e) => Reaction(q);
         }
 
-        public override void Reaction()
+        public override void Reaction(object q)
         {
-            MessageBox.Show($"В этом квадрате лес. Его координаты: ({XCoordinate};{YCoordinate})");
+            SetUnit(q as Button);
+            //MessageBox.Show($"В этом квадрате лес. Его координаты: ({XCoordinate};{YCoordinate})");
         }
     }
 }

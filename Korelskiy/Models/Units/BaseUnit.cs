@@ -10,15 +10,15 @@ namespace Korelskiy.Models.Units
     public abstract class BaseUnit
     {
         public string Title { get; }
-        public string ImageTitle { get; }
+        public string ImagePath { get; }
         public int Price { get; }
 
         public Nations Nation { get; set; }
 
-        public BaseUnit(string title, string imageTitle, int price, Nations nation)
+        public BaseUnit(string title, string imagePath, int price, Nations nation)
         {
             Title = title;
-            ImageTitle = imageTitle;
+            ImagePath = imagePath;
             Price = price;
             Nation = nation;
         }

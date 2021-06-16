@@ -22,7 +22,7 @@ namespace Korelskiy.Models.Units.Airplanes.Fighters
             buttonForDraw.Width = 160;
             buttonForDraw.Height = 120;
             buttonForDraw.HorizontalAlignment = System.Windows.HorizontalAlignment.Center;
-            Image photo = new Image() { Source = new BitmapImage(new Uri($"../Images/UnitsImages/AirplanesImages/FightersImages/{ImageTitle}", UriKind.Relative)), Height = 80 };
+            Image photo = new Image() { Source = new BitmapImage(new Uri($"{ImagePath}", UriKind.Relative)), Height = 80 };
             Label title = new Label() { HorizontalAlignment = System.Windows.HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center, Content = $"{Title}", Height = 20, FontSize = 10 };
             Label price = new Label() { HorizontalAlignment = System.Windows.HorizontalAlignment.Center, VerticalAlignment = VerticalAlignment.Center, Content = $"Цена: {Price}", Height = 20, FontSize = 10 };
             StackPanel elements = new StackPanel();

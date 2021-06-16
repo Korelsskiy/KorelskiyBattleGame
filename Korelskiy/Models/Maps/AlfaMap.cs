@@ -1,10 +1,12 @@
 ﻿using Korelskiy.Models.Cells;
+using Korelskiy.Models.Units;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Korelskiy.Models.Maps
 {
@@ -82,12 +84,30 @@ namespace Korelskiy.Models.Maps
                         cellForAdd = new MountainCell(j, i);
                     else
                         cellForAdd = new TerrainCell(j, i);
+                    buttonForDraw.Click += OnUnitSpawn;
                     cellForAdd.Draw(buttonForDraw);
                     gridForDraw.Children.Add(buttonForDraw);
                     Grid.SetRow(buttonForDraw, i);
                     Grid.SetColumn(buttonForDraw, j);
                 }
             }
+
+
+        }
+
+        private void OnUnitSpawn(object sender, System.Windows.RoutedEventArgs e)
+        {
+            if (UnitForSpawn != null)
+            {
+                BaseCell cell = ((sender as Button).Tag as BaseCell);
+                cell.Unit = UnitForSpawn;
+                (sender as Button).Content = new Image() { Source = new BitmapImage(new Uri($"{UnitForSpawn.ImagePath}", UriKind.Relative)) };
+                UnitSpawned.Invoke(sender as Button, UnitForSpawn);
+                UnitForSpawn = null;
+                
+            }
+            
+
         }
     }
 }

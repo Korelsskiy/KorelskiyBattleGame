@@ -83,6 +83,7 @@
     <Compile Include="Models\Maps\DeltaMap.cs" />
     <Compile Include="Models\Nations.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\PlayerBase.cs" />
     <Compile Include="Models\Units\Airplanes\BaseAirplane.cs" />
     <Compile Include="Models\Units\Airplanes\Fighters\BaseFighterAirplane.cs" />
     <Compile Include="Models\Units\Airplanes\Fighters\Bf109.cs" />

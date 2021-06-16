@@ -14,7 +14,9 @@ namespace Korelskiy.Models
 {
     public class Player
     {
+        public int ReservePoints { get; set; }
         public string Name { get; }
+        public List<BaseUnit> Units { get; set; }
 
         public Nations Nation { get; }
 
@@ -22,6 +24,8 @@ namespace Korelskiy.Models
         {
             Name = name;
             Nation = nation;
+            ReservePoints = 100;
+            Units = new List<BaseUnit>();
         }
 
         public List<BaseUnit> GetAvalibleUnits() 
@@ -41,6 +45,12 @@ namespace Korelskiy.Models
 
             return avalibleUnits;
             
+        }
+
+        public void BuyUnit(BaseUnit unit)
+        {
+            Units.Add(unit);
+            ReservePoints -= unit.Price;
         }
     }
 }

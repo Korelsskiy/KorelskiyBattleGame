@@ -20,19 +20,31 @@
             <RowDefinition Height="0.2*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <Label x:Name="playerDisplayLabel"
-               Grid.Column="0"
-               Grid.Row="0"
+        <StackPanel>
+            <Label x:Name="playerDisplayLabel"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                FontSize="16"></Label>
 
+            <Label x:Name="playerMoneyDisplayLabel"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="16"></Label>
+        </StackPanel>
+        
+
         <Label x:Name="mapTitleLable" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="1"></Label>
 
-        <Button x:Name="endTurnButton" Content="Сдать ход" FontSize="24" 
-                Grid.Column="2" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2">
+            <Button x:Name="endTurnButton" Content="Сдать ход" FontSize="24"  Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
                 Click="endTurnButton_Click"></Button>
 
+            <Button x:Name="backToGameSettingsButton"  
+                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"
+                Content="Выйти" Background="LightPink" 
+                Click="backToGameSettingsButton_Click"></Button>
+        </StackPanel>
+        
         <DockPanel Grid.Column="0" Grid.Row="1">
             <Label DockPanel.Dock="Top" Content="Закупка отрядов: " FontSize="16" HorizontalAlignment="Center"></Label>
             <StackPanel HorizontalAlignment="Center" 
@@ -47,14 +59,15 @@
         <DockPanel Grid.Column="2" Grid.Row="1">
             <Label DockPanel.Dock="Top" Content="Ваши отряды: " FontSize="16" 
                    HorizontalAlignment="Center"></Label>
-            <StackPanel HorizontalAlignment="Center" 
-                        x:Name="playerUnitsStack" Grid.Row="1" Grid.Column="0">
-            </StackPanel>
+
+            <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                          VerticalScrollBarVisibility="Auto" 
+                          Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" >
+                <StackPanel x:Name="playerUnitsStack"></StackPanel>
+            </ScrollViewer>
+            
         </DockPanel>
 
-        <Button x:Name="backToGameSettingsButton" Grid.Row="2" Grid.Column="2" 
-                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"
-                Content="Выйти" Background="LightPink" 
-                Click="backToGameSettingsButton_Click"></Button>
+        
     </Grid>
 </Window>
